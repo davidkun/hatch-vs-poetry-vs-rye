@@ -10,9 +10,9 @@ Each subdirectory has a Python project example for
 <th>Hatch</th><th>Rye</th><th>Poetry</th>
 </tr>
 <tr>
-<td><img src="https://hatch.pypa.io/latest/assets/images/logo.svg" height="64px" alt="Hatch"></td>
-<td><img src="https://rye.astral.sh/static/logo.svg" height="64px" alt="Rye"></td>
-<td><img src="https://python-poetry.org/images/logo-origami.svg" height="64px" alt="Poetry"></td>
+<td><a href="https://hatch.pypa.io"><img src="https://hatch.pypa.io/latest/assets/images/logo.svg" height="64px" alt="Hatch"></a></td>
+<td><a href="https://rye.astral.sh"><img src="https://rye.astral.sh/static/logo.svg" height="64px" alt="Rye"></a></td>
+<td><a href="https://python-poetry.org"><img src="https://python-poetry.org/images/logo-origami.svg" height="64px" alt="Poetry"></a></td>
 </tr>
 </table>
 
