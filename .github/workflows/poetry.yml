@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'poetry-demo/**'
+      - '.github/workflows/poetry.yml'
 defaults:
   run:
     working-directory: ./poetry-demo

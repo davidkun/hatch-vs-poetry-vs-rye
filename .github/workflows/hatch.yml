@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'hatch-demo/**'
+      - '.github/workflows/hatch.yml'
 defaults:
   run:
     working-directory: ./hatch-demo
