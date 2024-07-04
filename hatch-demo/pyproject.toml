@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hatch-demo"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "David Kun", email = "davidkun4@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Source = "https://github.com/davidkun/hatch-vs-poetry-vs-rye"
+
+[tool.hatch.version]
+path = "src/hatch_demo/__about__.py"
+
+[tool.hatch.envs.default]
+installer = "uv"
+dependencies = [
+  "polars",
+  "requests"
+]
+
+[tool.hatch.envs.default.scripts]
+run = "python src/hatch_demo/demo.py"
+
+[tool.hatch.envs.dev]
+installer = "uv"
+dependencies = [
+  "hatch-demo",
+  "pytest",
+  "ruff"
+]
+
+[tool.hatch.envs.dev.scripts]
+test = "pytest"
+check = "ruff check"
+lint = "ruff check --fix && ruff format"
