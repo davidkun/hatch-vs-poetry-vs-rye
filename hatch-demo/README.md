@@ -2,21 +2,20 @@
 
 ## Steps
 
-1. Install `hatch`
-
+1. Install `hatch`:
 ```bash
 $ pipx install hatch
 # or 
-$ brew install pipx
+$ brew install hatch
 ```
 
-2. Create new project
+2. Create new project:
 ```bash
 $ hatch new "Hatch Demo"
 $ cd hatch-demo
 ```
 
-3. Create default environment
+3. Create default environment:
 ```bash
 $ hatch env create
 ```
@@ -47,7 +46,7 @@ dependencies = [
 ```
 _Note: You have to reference `hatch-demo` in order to get the project deps needed for running tests._
 
-6. Add `test` and `lint` scripts to `dev` env
+6. Add `test` and `lint` scripts to `dev` env:
 
 ```toml
 [tool.hatch.envs.dev.scripts]
@@ -55,15 +54,14 @@ test = "pytest"
 lint = "ruff check --fix && ruff format"
 ```
 
-7. Create/install the env
-
+7. Create/install the env:
 ```bash
 $ hatch env create dev
 ```
 
-8. Add code (`demo.py`) and tests (`test_demo.py`)
+8. Add code (`demo.py`) and tests (`test_demo.py`).
 
-9. Check envs
+9. Check envs:
 
 ```bash
 $ hatch env show
@@ -80,26 +78,25 @@ $ hatch env show
 └─────────┴─────────┴──────────────┴─────────┘
 ```
 
-10. Run tests and lint/format code
-
+10. Run tests and lint/format code:
 ```bash
 $ hatch run dev:test
 $ hatch run dev:lint
 ```
 
-11. Add default script to run the app
+11. Add default script to run the app:
 
 ```toml
 [tool.hatch.envs.default.scripts]
 run = "python src/hatch_demo/demo.py"
 ```
 
-12. Run the app
+12. Run the app:
 ```bash
 $ hatch run default:run
 ```
 
-13. Add [hatch-based GH workflow](../.github/workflows/hatch.yml) to check linting and run tests
+13. Add [hatch-based GH workflow](../.github/workflows/hatch.yml) to check linting and run tests.
 
 ## Notes
 
