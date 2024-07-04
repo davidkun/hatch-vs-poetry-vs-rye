@@ -1,0 +1,29 @@
+name: Rye workflow
+on:
+  push:
+    paths:
+      - 'rye-demo/**'
+      - '.github/workflows/rye.yml'
+defaults:
+  run:
+    working-directory: ./rye-demo
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Rye
+        uses: eifinger/setup-rye@v3
+        with:
+            version: '0.35.0'
+      - name: Sync
+        run: rye sync
+      - name: Lint
+        run: rye lint
+      - name: Run tests
+        run: rye run pytest
