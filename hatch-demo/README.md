@@ -99,7 +99,17 @@ run = "python src/hatch_demo/demo.py"
 $ hatch run default:run
 ```
 
+13. Add [hatch-based GH workflow](../.github/workflows/hatch.yml) to check linting and run tests
+
 ## Notes
 
-* Not sure how to install the project so that it can called like `python -m hatch_demo`
+* ~~Not sure how to install the project so that it can called like `python -m hatch_demo`~~
+  - You can run it from the `hatch` env like: `hatch run dev:python -m hatch_demo`
+  - You can install it from source and call it:
+    ```bash
+    $ uv venv
+    $ uv pip install .
+    $ source .venv/bin/activate
+    $ python -m hatch_demo
+    ```
 * Not sure how to call the entrypoint scripts

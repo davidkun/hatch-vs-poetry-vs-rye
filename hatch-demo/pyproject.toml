@@ -20,7 +20,10 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+  "polars",
+  "requests"
+]
 
 [project.urls]
 Source = "https://github.com/davidkun/hatch-vs-poetry-vs-rye"

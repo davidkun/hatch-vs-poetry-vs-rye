@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - 'hatch-demo/**'
+defaults:
+  run:
+    working-directory: ./hatch-demo
 
 jobs:
   test:
@@ -15,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Install Hatch
         uses: pypa/hatch@install
+      - name: Build package
+        run: hatch build
       - name: Lint
         run: hatch run dev:check
       - name: Run tests
