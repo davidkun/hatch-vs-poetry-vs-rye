@@ -18,6 +18,8 @@ jobs:
           python-version: '3.12'
       - name: Install Poetry
         uses: snok/install-poetry@v1
+      - name: Install deps
+        run: poetry install
       - name: Lint
         run: poetry run ruff check
       - name: Run tests
