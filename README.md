@@ -11,7 +11,7 @@ Each subdirectory has a Python project example for
 
 <table>
 <tr>
-<th>Hatch</th><th>Rye</th><th>Poetry</th>
+<th>Hatch</th><th>Rye</th><th>Poetry</th><th>uv</th>
 </tr>
 <tr>
 <td><a href="https://hatch.pypa.io"><img src="https://hatch.pypa.io/latest/assets/images/logo.svg" height="64px" alt="Hatch"></a></td>
